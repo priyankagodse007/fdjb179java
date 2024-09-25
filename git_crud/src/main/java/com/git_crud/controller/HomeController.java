@@ -17,4 +17,10 @@ public String saveEmployee(@RequestBody Employee e) {
 es.save(e);
 return "saved data";	
 }
+	@GetMapping("/getall")
+	public List<Employee> getall()
+	{
+		List<Employee> list=es.getall();
+		return list;
+	}
 }
